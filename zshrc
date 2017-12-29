@@ -96,3 +96,6 @@ source $ZSH/oh-my-zsh.sh
 #syntax highlighting
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_STYLES[path]='bold'
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=214
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=214
+
