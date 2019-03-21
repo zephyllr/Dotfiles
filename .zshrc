@@ -1,4 +1,4 @@
-#If you come from bash you might have to change your $PATH.
+# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -92,6 +92,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias mkdir='mkdir -p -v'
+alias rm='rm -vi'
+alias mv='mv -vi'
+alias cp='cp -vi'
 
 #syntax highlighting
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -99,3 +103,9 @@ ZSH_HIGHLIGHT_STYLES[path]='bold'
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=214
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=214
 
+#z subing cd
+. `brew --prefix`/etc/profile.d/z.sh
+
+#java environment
+PATH=/usr/local/jdk1.8.0/bin:$PATH
+JAVA_HOME=/usr/bin/java
