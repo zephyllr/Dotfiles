@@ -1,12 +1,15 @@
-syntax on
-filetype plugin indent on 
-colorscheme jellybeans
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
 call vundle#end()
+
+syntax on
+filetype plugin indent on 
+colorscheme jellybeans
 
 set encoding=utf-8
 set nocompatible               " Use Vim defaults
