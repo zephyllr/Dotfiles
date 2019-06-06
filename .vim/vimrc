@@ -5,6 +5,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 call vundle#end()
 
 syntax on
@@ -56,5 +58,9 @@ let g:lightline = {
 
 ""autocmd StdinReadPre * let s:std_in=1
 ""autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif                                                         
+
+""disable folding for vim markdown
+let g:vim_markdown_folding_disabled = 1
+
 ""map <C-n> :NERDTreeToggle<CR>
 imap <S-Tab> <C-P>
