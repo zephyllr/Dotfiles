@@ -1,18 +1,18 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+"" Vundle stuff
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 call vundle#end()
 
 syntax on
 filetype plugin indent on 
 colorscheme jellybeans
 
+"" Vim configs
 set encoding=utf-8
 set nocompatible               " Use Vim defaults
 set hidden                     " Quick buffer switching
@@ -42,6 +42,9 @@ set nolazyredraw
 set mouse=a 
 set clipboard=unnamed
 
+"" Override vim defaults
+hi CursorLineNr    term=bold cterm=bold ctermfg=Yellow gui=bold
+
 ""Statusline configs
 set noshowmode
 
@@ -51,16 +54,5 @@ let g:lightline = {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
       \ }
 
-""autocmd StdinReadPre * let s:std_in=1
-""autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif                                                         
-
-""disable folding for vim markdown
-let g:vim_markdown_folding_disabled = 1
-
-""map <C-n> :NERDTreeToggle<CR>
-imap <S-Tab> <C-P>
